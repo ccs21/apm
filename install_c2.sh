@@ -1,4 +1,3 @@
-alias beep='paplay /home/myserver/apm/res/nya.mp3'
 clear
 echo ""
 echo ""
@@ -33,7 +32,7 @@ echo "패키지 목록을 갱신 합니다."
 echo "================================"
 echo ""
 echo ""
-sleep 5
+sleep 3
 sudo apt-get update
 sleep 1
 clear
@@ -44,7 +43,7 @@ echo "설치되어 있는 프로그램의 최신 패치를 진행 합니다.."
 echo "=================================================================="
 echo ""
 echo ""
-sleep 5
+sleep 3
 sudo apt-get upgrade -y
 sleep 1
 clear
@@ -55,7 +54,7 @@ echo "Apache2 를 설치 합니다."
 echo "================================"
 echo ""
 echo ""
-sleep 5
+sleep 3
 sudo apt-get install apache2 -y
 sleep 1
 clear
@@ -66,7 +65,7 @@ echo "모듈 설정을 변경 합니다."
 echo "================================"
 echo ""
 echo ""
-sleep 5
+sleep 3
 sudo a2enmod rewrite
 sudo a2enmod headers
 sudo a2enmod ssl
@@ -80,7 +79,7 @@ echo "Apache2 설정을 변경 합니다."
 echo "================================"
 echo ""
 echo ""
-sleep 5
+sleep 3
 cp /home/myserver/apm/res/apache2.conf /etc/apache2/apache2.conf
 sudo /etc/init.d/apache2 restart
 sleep 1
@@ -92,7 +91,7 @@ echo "PHP7을 설치 합니다."
 echo "================================"
 echo ""
 echo ""
-sleep 5
+sleep 3
 sudo apt-get install php -y
 sleep 1
 clear
@@ -103,7 +102,7 @@ echo "Apache2-PHP 연동모듈을 설치합니다."
 echo "====================================="
 echo ""
 echo ""
-sleep 5
+sleep 3
 sudo apt-get install libapache2-mod-php7.0 
 sleep 1
 clear
@@ -114,7 +113,7 @@ echo "PHP 암호화 모듈을 설치합니다."
 echo "====================================="
 echo ""
 echo ""
-sleep 5
+sleep 3
 sudo apt-get install php-mcrypt -y
 sleep 1
 clear
@@ -125,7 +124,7 @@ echo "PHP 다국어 모듈을 설치합니다."
 echo "====================================="
 echo ""
 echo ""
-sleep 5
+sleep 3
 sudo apt-get install php-mbstring -y
 sleep 1
 clear
@@ -136,7 +135,7 @@ echo "PHP 이미지 처리 모듈을 설치합니다."
 echo "====================================="
 echo ""
 echo ""
-sleep 5
+sleep 3
 sudo apt-get install php-gd -y
 sleep 1
 clear
@@ -147,7 +146,7 @@ echo "PHP curl/xml 모듈을 설치합니다."
 echo "====================================="
 echo ""
 echo ""
-sleep 5
+sleep 3
 sudo apt-get install php-curl php-xml -y
 sleep 1
 sudo /etc/init.d/apache2 restart
@@ -160,11 +159,11 @@ echo "MariaDB를 설치합니다."
 echo "====================================="
 echo ""
 echo ""
-sleep 5
+sleep 3
 sudo apt-get install mariadb-server -y
 sleep 1
 clear
-beep
+paplay /home/myserver/apm/res/nya.mp3
 echo ""
 echo ""
 echo "========================================================="
@@ -186,7 +185,7 @@ echo "PHP-MYSQL 연동 모듈을 설치합니다."
 echo "====================================="
 echo ""
 echo ""
-sleep 5
+sleep 3
 sudo apt-get install php-mysql -y
 sleep 1
 clear
@@ -197,7 +196,7 @@ echo "MYSQL 기본 언어셋을 설정 합니다."
 echo "====================================="
 echo ""
 echo ""
-sleep 5
+sleep 3
 cp /home/myserver/apm/res/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
 sleep 1
 sudo service mysql restart
@@ -210,7 +209,7 @@ echo "PHP 권한을 설정합니다."
 echo "====================================="
 echo ""
 echo ""
-sleep 5
+sleep 3
 sudo apt-get install libapache2-mpm-itk -y
 sleep 1
 sudo chmod 711 /home
@@ -232,7 +231,7 @@ echo "최대 실행 시간 무제한으로 변경"
 echo "======================================================="
 echo ""
 echo ""
-sleep 5
+sleep 3
 cp /home/myserver/apm/res/php.ini /etc/php/7.0/apache2/php.ini
 sleep 1
 sudo service apache2 restart
@@ -245,7 +244,7 @@ echo "FTP서버를 설치 합니다.."
 echo "====================================="
 echo ""
 echo ""
-sleep 5
+sleep 3
 sudo apt-get install vsftpd -y
 sleep 1
 clear
@@ -256,7 +255,7 @@ echo "samba서버를 설치 합니다.."
 echo "====================================="
 echo ""
 echo ""
-sleep 5
+sleep 3
 sudo apt-get install samba -y
 sleep 1
 clear
@@ -269,8 +268,8 @@ echo "접속 비밀번호를 입력후 엔터를 눌러 주세요."
 echo "====================================="
 echo ""
 echo ""
-beep
-sleep 5
+paplay /home/myserver/apm/res/nya.mp3
+sleep 3
 cp /home/myserver/apm/res/smb.conf /etc/samba/smb.conf
 sleep 1
 sudo smbpasswd -a myuser
@@ -285,7 +284,7 @@ echo "웹 서버를 기동 합니다."
 echo "====================================="
 echo ""
 echo ""
-sleep 5
+sleep 3
 cp /home/myserver/apm/res/000-default.conf /etc/apache2/sites-available/000-default.conf
 cp /home/myserver/apm/res/index.html /home/myuser/www/index.html
 cp /home/myserver/apm/res/phpinfo.php /home/myuser/www/phpinfo.php
@@ -300,7 +299,7 @@ echo "phpMyAdmin을 설치 합니다."
 echo "====================================="
 echo ""
 echo ""
-sleep 5
+sleep 3
 sudo apt-get install unzip -y
 sleep 1
 cp /home/myserver/apm/res/phpmyadmin.zip /home/myuser/www/phpmyadmin.zip
@@ -309,6 +308,7 @@ cd /home/myuser/www
 sleep 1
 unzip phpmyadmin.zip
 sleep 1
+mv phpMyAdmin-4.7.7-all-languages phpmyadmin
 rm phpmyadmin.zip
 sleep 1
 clear

@@ -240,14 +240,34 @@ clear
 echo ""
 echo ""
 echo "======================================================="
+echo "15초 후 WebServer 계정 및 ROOT디렉토리를 설정 합니다."
+echo "콘솔에서 요청하는 내용을 입력 후 엔터를 눌러주세요"
+echo "비밀번호 관련된 설정 외의 다른 설정은 그냥 엔터를"
+echo "누르셔도 관계 없습니다."
+echo "======================================================="
+echo ""
+echo ""
+sleep 15
+sudo adduser myuser
+sleep 1
+su -l myuser
+sleep 1
+mkdir www
+sleep 1
+exit
+sleep 1
+sudo service apache2 restart
+sleep 1
+clear
+echo ""
+echo ""
+echo "======================================================="
 echo "Let's encrypt 를 설치 합니다."
 echo "======================================================="
 echo ""
 echo ""
 sleep 5
 sudo apt-get install letsencrypt -y
-sleep 1
-sudo service apache2 restart
 sleep 1
 clear
 echo ""

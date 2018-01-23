@@ -1,0 +1,1 @@
+letsencrypt certonly --webroot --webroot-path=/home/myuser/www -d examplesite.com -d www.examplesite.com

@@ -1,0 +1,12 @@
+adduser myuser
+
+su -l myuser
+
+mkdir www
+
+exit
+
+
+nano install_c4.sh
+
+exam.com을 자신의 도메인으로 변경

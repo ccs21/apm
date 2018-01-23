@@ -227,34 +227,11 @@ echo "업로드 용량 200MB로 변경"
 echo "업로드 수량 200으로 변경"
 echo "POST방식으로 넘겨질 최대 사이즈 200MB로 변경"
 echo "최대 실행 시간 무제한으로 변경"
-echo "최대 실행 시간 무제한으로 변경"
 echo "======================================================="
 echo ""
 echo ""
 sleep 5
 cp /home/myserver/apm/res/php.ini /etc/php/7.0/apache2/php.ini
-sleep 1
-sudo service apache2 restart
-sleep 1
-clear
-echo ""
-echo ""
-echo "======================================================="
-echo "15초 후 WebServer 계정 및 ROOT디렉토리를 설정 합니다."
-echo "콘솔에서 요청하는 내용을 입력 후 엔터를 눌러주세요"
-echo "비밀번호 관련된 설정 외의 다른 설정은 그냥 엔터를"
-echo "누르셔도 관계 없습니다."
-echo "======================================================="
-echo ""
-echo ""
-sleep 15
-sudo adduser myuser
-sleep 1
-su -l myuser
-sleep 1
-mkdir www
-sleep 1
-exit
 sleep 1
 sudo service apache2 restart
 sleep 1
@@ -279,3 +256,5 @@ echo "가이드를 따라 보안 인증서 설치를 마무리 해 주시길 바
 echo "============================================================"
 echo ""
 echo ""
+chmod 755 install_c4.sh
+sleep 3

@@ -10,3 +10,15 @@ exit
 nano install_c4.sh
 
 exam.com을 자신의 도메인으로 변경
+
+
+
+
+
+
+C4
+examplesite.com 을 모두 자신의 도메인으로 수정
+
+
+10 5 * * 1 /usr/bin/letsencrypt renew >> /var/log/le-renew.log
+15 5 * * 1 /usr/sbin/service apache2 reload

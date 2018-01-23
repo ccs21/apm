@@ -1,3 +1,4 @@
+alias beep='paplay /home/myserver/apm/res/nya.mp3'
 clear
 echo ""
 echo ""
@@ -163,6 +164,7 @@ sleep 5
 sudo apt-get install mariadb-server -y
 sleep 1
 clear
+beep
 echo ""
 echo ""
 echo "========================================================="
@@ -267,6 +269,7 @@ echo "접속 비밀번호를 입력후 엔터를 눌러 주세요."
 echo "====================================="
 echo ""
 echo ""
+beep
 sleep 5
 cp /home/myserver/apm/res/smb.conf /etc/samba/smb.conf
 sleep 1
@@ -308,6 +311,5 @@ unzip phpmyadmin.zip
 sleep 1
 rm phpmyadmin.zip
 sleep 1
-sudo chmod 755 /home/myuser/www
-sleep 1
+clear
 firefox 127.0.0.1

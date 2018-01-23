@@ -258,3 +258,51 @@ sleep 5
 sudo apt-get install samba -y
 sleep 1
 clear
+echo ""
+echo ""
+echo "====================================="
+echo "samba서버를 설정 합니다."
+echo "설정 중 비밀번호 생성 요청이 있습니다."
+echo "접속 비밀번호를 입력후 엔터를 눌러 주세요."
+echo "====================================="
+echo ""
+echo ""
+sleep 5
+cp /home/myserver/apm/res/smb.conf /etc/samba/smb.conf
+sleep 1
+sudo smbpasswd -a myuser
+sleep 1
+sudo service smbd restart
+sleep 1
+clear
+echo ""
+echo ""
+echo "====================================="
+echo "웹 서버를 기동 합니다."
+echo "====================================="
+echo ""
+echo ""
+sleep 5
+cp /home/myserver/apm/res/000-default.conf /etc/apache2/sites-available/000-default.conf
+sleep 1
+sudo service apache2 restart
+sleep 1
+clear
+echo ""
+echo ""
+echo "====================================="
+echo "phpMyAdmin을 설치 합니다."
+echo "====================================="
+echo ""
+echo ""
+sleep 5
+sudo apt-get install unzip -y
+sleep 1
+cp /home/myserver/apm/res/phpmyadmin.zip /home/myuser/www/phpmyadmin.zip
+sleep 1
+cd /home/myuser/www
+sleep 1
+unzip phpmyadmin.zip
+sleep 1
+rm phpmyadmin.zip
+sleep 1

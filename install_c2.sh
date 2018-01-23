@@ -213,7 +213,7 @@ sudo apt-get install libapache2-mpm-itk -y
 sleep 1
 sudo chmod 711 /home
 sleep 1
-sudo chmod -R 700 /home/*
+sudo chmod -R 755 /home/*
 sleep 1
 sudo service apache2 restart
 sleep 1

@@ -308,4 +308,6 @@ unzip phpmyadmin.zip
 sleep 1
 rm phpmyadmin.zip
 sleep 1
+sudo chmod 755 /home/myuser/www
+sleep 1
 firefox 127.0.0.1

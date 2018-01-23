@@ -284,6 +284,8 @@ echo ""
 echo ""
 sleep 5
 cp /home/myserver/apm/res/000-default.conf /etc/apache2/sites-available/000-default.conf
+cp /home/myserver/apm/res/index.html /home/myuser/www/index.html
+cp /home/myserver/apm/res/phpinfo.php /home/myuser/www/phpinfo.php
 sleep 1
 sudo service apache2 restart
 sleep 1
@@ -306,3 +308,4 @@ unzip phpmyadmin.zip
 sleep 1
 rm phpmyadmin.zip
 sleep 1
+firefox 127.0.0.1

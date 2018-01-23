@@ -1,4 +1,4 @@
-<p style="text-align: center;"><img editor_component="image_link" height="118" src="files/attach/images/205/205/e1a9bfa6a607d337efe9d2a63b8bd10f.jpg" style="width: 300px; height: 118px;" width="300" /></p>
+<p style="text-align: center;"><img editor_component="image_link" height="118" src="https://wildcats.co.kr/xe/files/attach/images/205/205/e1a9bfa6a607d337efe9d2a63b8bd10f.jpg" style="width: 300px; height: 118px;" width="300" /></p>
 
 <p style="text-align: center;">&nbsp;</p>
 
@@ -10,4 +10,20 @@
 
 <p style="text-align: center;">&nbsp;</p>
 
+<p style="text-align: center;"><strong>ftp</strong> myuser / PW</p>
+
+<p style="text-align: center;"><strong>mysql</strong> root / PW</p>
+
+<p style="text-align: center;"><strong>samba</strong> myuser / PW</p>
+
 <p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;">php 정보 보기 : <a href="http://127.0.0.1/phpinfo.php">http://127.0.0.1/phpinfo.php</a></p>
+
+<p style="text-align: center;">db 접속 테스트 : <a href="http://127.0.0.1/phpmyadmin">http://127.0.0.1/phpmyadmin</a></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;">지원 및 문의 : <a href="https://wildcats.co.kr">https://wildcats.co.kr</a></p>

@@ -46,6 +46,8 @@ echo ""
 sleep 3
 sudo apt-get upgrade -y
 sleep 1
+sudo apt-get install mpg123 -y
+sleep1
 clear
 echo ""
 echo ""
@@ -163,7 +165,7 @@ sleep 3
 sudo apt-get install mariadb-server -y
 sleep 1
 clear
-paplay /home/myserver/apm/res/nya.mp3
+mpg123 /home/myserver/apm/res/nya.mp3
 echo ""
 echo ""
 echo "========================================================="
@@ -268,7 +270,7 @@ echo "접속 비밀번호를 입력후 엔터를 눌러 주세요."
 echo "====================================="
 echo ""
 echo ""
-paplay /home/myserver/apm/res/nya.mp3
+mpg123 /home/myserver/apm/res/nya.mp3
 sleep 3
 cp /home/myserver/apm/res/smb.conf /etc/samba/smb.conf
 sleep 1
